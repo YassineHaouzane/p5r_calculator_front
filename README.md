@@ -1,4 +1,4 @@
-# calculator
+# p5r_calculator 
 
 Front-end to compute recipes of personas in the game persona 5 royal
 

@@ -3,6 +3,7 @@ import type { Persona, Recipes } from '@/data/types';
 import { getPersonaRecipes, globalPersonas } from '@/store';
 import { type Ref, ref, watchEffect } from 'vue';
 import PersonaInfo from '@/components/PersonaInfo.vue';
+import Title from '@/components/Title.vue';
 
 const props = defineProps<{
   name: string
@@ -23,6 +24,7 @@ watchEffect(async () => {
 </script>
 
 <template>
+  <Title/>
   <div v-if="persona && recipes">
     <PersonaInfo :persona="persona" :recipes="recipes"></PersonaInfo>
   </div>

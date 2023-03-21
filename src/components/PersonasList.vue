@@ -66,8 +66,11 @@ export default defineComponent({
 </script>
 
 <template>
-    <label for="filter">Filter: </label>
-    <input v-model="searchValue" name="filter">
+    <div class="search-container">
+        <label for="filter">Filter</label>
+        <input v-model="searchValue" name="filter">
+    </div>
+
     <table>
         <PersonaListHead @sortByName="sortByName" @sortByLevel="sortByLevel" @groupByArcana="groupByArcana" />
         <tbody>
@@ -79,7 +82,15 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.search-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
 table {
     border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
 }
 </style>

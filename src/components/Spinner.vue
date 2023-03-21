@@ -1,29 +1,12 @@
 <script setup lang="ts">
 
-
-import type { Persona } from '../data/types';
-import { ref, watchEffect, type Ref } from 'vue'
-import  PersonasList  from './PersonasList.vue';
-import { globalPersonas } from '@/store';
-
 defineProps<{
     loadingText: string
 }>()
 
-
-let personas: Ref<Persona[] | undefined> = ref(undefined);
-
-watchEffect(async () => {
-    let response = await globalPersonas();
-    personas.value = response;
-});
-
 </script>
 <template>
-    <div v-if="personas">
-        <PersonasList :personas="personas"/>
-    </div>
-    <div v-else>
+    <div>
         <img alt="Persona Logo"
             src="https://gcdn.thunderstore.io/live/repository/icons/Lacirev-Persona5Soundtrack-1.4.1.png.128x128_q95.png"
             class="image">
@@ -32,7 +15,6 @@ watchEffect(async () => {
 </template>
 
 <style scoped>
-
 div {
     display: flex;
     flex-direction: column;

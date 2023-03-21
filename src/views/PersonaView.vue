@@ -18,7 +18,6 @@ watchEffect(async () => {
   if (currentPersona) {
     persona.value = currentPersona;
     recipes.value = await getPersonaRecipes(currentPersona);
-    console.log(recipes.value);
   }
 });
 </script>

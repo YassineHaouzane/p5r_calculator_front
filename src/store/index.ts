@@ -8,7 +8,6 @@ const API_URL = import.meta.env.VITE_APP_API_URI;
 export async function globalPersonas() {
     if (!personasRef) {
         personasRef = await (await fetch(`${API_URL}/personas`)).json();
-        console.log('FETCH API');
     }
     return personasRef;
 }

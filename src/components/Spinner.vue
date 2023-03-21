@@ -15,7 +15,6 @@ let personas: Ref<Persona[] | undefined> = ref(undefined);
 
 watchEffect(async () => {
     let response = await globalPersonas();
-    console.log(response); 
     personas.value = response;
 });
 

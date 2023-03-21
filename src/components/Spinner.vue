@@ -6,18 +6,22 @@ defineProps<{
 
 </script>
 <template>
-    <div>
-        <img alt="Persona Logo"
-            src="https://gcdn.thunderstore.io/live/repository/icons/Lacirev-Persona5Soundtrack-1.4.1.png.128x128_q95.png"
-            class="image">
+    <div class="spinner-container">
+        <div>
+            <img alt="Persona Logo"
+                src="https://gcdn.thunderstore.io/live/repository/icons/Lacirev-Persona5Soundtrack-1.4.1.png.128x128_q95.png"
+                class="image">
+        </div>
         {{ loadingText }}
+
     </div>
 </template>
 
 <style scoped>
-div {
+.spinner-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 p {

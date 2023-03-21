@@ -24,8 +24,8 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <Title/>
   <div v-if="persona && recipes">
+    <Title></Title>
     <PersonaInfo :persona="persona" :recipes="recipes"></PersonaInfo>
   </div>
 </template>

@@ -18,8 +18,8 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <Title/>
   <div v-if="personas">
+    <Title></Title>
     <PersonasList :personas="personas" />
   </div>
   <div v-else class="app-container">
@@ -30,6 +30,8 @@ watchEffect(async () => {
 
 <style scoped>
 .app-container {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 </style>

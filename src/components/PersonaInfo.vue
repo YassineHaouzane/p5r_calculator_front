@@ -18,7 +18,7 @@ defineProps<{
                 <td>Ingredients</td>
             </tr>
         </thead>
-        <tbody v-for="recipe in recipes">
+        <tbody v-for="recipe in recipes.sort((a,b) => a.cost - b.cost)">
             <tr>
                 <td>¥{{ recipe.cost }}</td>
                 <td>

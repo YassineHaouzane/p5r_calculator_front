@@ -2,6 +2,7 @@
 import type { Persona, Recipes } from '@/data/types';
 import { getPersonaRecipes, globalPersonas } from '@/store';
 import { type Ref, ref, watchEffect } from 'vue';
+import Spinner from '@/components/Spinner.vue';
 import PersonaInfo from '@/components/PersonaInfo.vue';
 import Title from '@/components/Title.vue';
 
@@ -28,4 +29,5 @@ watchEffect(async () => {
     <Title></Title>
     <PersonaInfo :persona="persona" :recipes="recipes"></PersonaInfo>
   </div>
+  <Spinner v-else class="app-container" loading-text="Loading data..." />
 </template>

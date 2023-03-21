@@ -22,16 +22,6 @@ watchEffect(async () => {
     <Title></Title>
     <PersonasList :personas="personas" />
   </div>
-  <div v-else class="app-container">
-    <Spinner loading-text="Loading data..." />
-  </div>
+  <Spinner v-else class="app-container" loading-text="Loading data..." />
 </template>
 
-
-<style scoped>
-.app-container {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-</style>

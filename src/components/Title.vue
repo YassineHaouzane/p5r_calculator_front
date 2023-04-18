@@ -11,4 +11,10 @@
 img {
     max-height: 150px;
 }
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
 </style>
